@@ -1,0 +1,64 @@
+/* CSS declarations go here */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	list-style: none;
+}
+.todayBlock {
+	width: 32%;
+	float: left;
+	margin-right: 2%;
+}
+.thisWeekBlock {
+	width: 32%;
+	float: left;
+	margin-right: 2%;
+}
+.mediumTermBlock {
+	width: 32%;
+	float: left;
+}
+.today {
+	font-size: 25px;
+	height: 25px;
+	width: 100%;
+	text-align: center;
+	border-radius: 1px;
+	height: 40px;
+	
+}
+.thisWeek {
+	font-size: 25px;
+	height: 25px;
+	width: 100%;
+	text-align: center;
+	border-radius: 1px;
+	height: 40px;
+}
+.mediumTerm {
+	font-size: 25px;
+	height: 25px;
+	width: 100%;
+	text-align: center;
+	border-radius: 1px;
+	height: 40px;
+}
+.listFormat {
+	text-align: center;
+	margin-top: 4px;
+}
+.listTitle {
+	text-align: center;
+	font-size: 36px;
+}
+.selected {
+	background: #f0f0f0;
+	border-radius: 5px;
+	padding: 6px;
+	border: 1px solid #ccc;
+}
+.itemSelect {
+	padding: 5px;
+}

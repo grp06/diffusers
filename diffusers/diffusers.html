@@ -1,0 +1,79 @@
+<head>
+  <title>To Do List</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>
+	{{>loginButtons}}
+	<br />
+
+<div class="container">
+<div class="todayBlock">	{{>today}} </div>
+<div class="thisWeekBlock">	{{>thisWeek}}</div>
+<div class="mediumTermBlock">	{{>mediumTerm}}</div>
+	
+</div>
+</body>
+
+
+<template name="today">
+		{{#if currentUser}}
+
+	<div class="listTitle"><p>To Do Today</p></div>
+	
+<input type="text" class="today" autofocus>
+	<div class="listFormat">	
+	<ul>
+		{{#each returnAllItems}}
+		<li class="itemSelect"><span class="{{highlightedItem}}">
+			{{item}}</span></li>
+		{{/each}}
+		</ul>
+		<input type="button" value="Remove Selected Task" class="remove">
+
+
+	</div>
+		{{/if}}
+</template>
+
+<template name="thisWeek">
+		{{#if currentUser}}
+
+	<div class="listTitle"><p>To Do This Week</p></div>
+	
+	<input type="text" class="thisWeek">
+	<div class="listFormat">	
+	<ul>
+		{{#each returnAllItems}}
+		<li class="itemSelect"><span class="{{highlightedItem}}">
+			{{item}}</span></li>
+		{{/each}}
+		</ul>
+		<input type="button" value="Remove Selected Task" class="remove">
+
+
+	</div>
+	{{/if}}
+</template>
+
+<template name="mediumTerm">
+		{{#if currentUser}}
+
+	<div class="listTitle"><p>Later</p></div>
+	
+<input type="text" class="mediumTerm">
+	<div class="listFormat">	
+	<ul>
+		{{#each returnAllItems}}
+		<li class="itemSelect"><span class="{{highlightedItem}}">
+			{{item}}</span></li>
+		{{/each}}
+		</ul>
+		<input type="button" value="Remove Selected Task" class="remove">
+
+
+	</div>
+	{{/if}}
+</template>
+
